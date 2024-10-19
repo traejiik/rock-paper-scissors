@@ -75,18 +75,16 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-  var humanScore = 0;
-  var computerScore = 0;
-
-  const humanSelection = getHumanChoice();
-  const computerSelection = getComputerChoice();
-
   for (let i = 1; i <= 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
   }
 
 }
 
+var humanScore = 0;
+var computerScore = 0;
 playGame();
 
 console.log("The final score is, humanScore: ", humanScore, ", computerScore: ", computerScore);
