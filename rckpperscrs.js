@@ -1,7 +1,7 @@
 console.log("HELLO WORLD");
 
 function getComputerChoice() {
-    var choice = Math.random()*3;
+    let choice = Math.random()*3;
     console.log(choice);
 
     if (choice <= 1) {
@@ -33,4 +33,10 @@ function getHumanChoice() {
     }
 }
 
+function playRound() {
+    
+}
+
+var humanScore = 0;
+var computerScore = 0;
 console.log(getHumanChoice());
