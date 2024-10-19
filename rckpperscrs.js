@@ -2,7 +2,6 @@ console.log("HELLO WORLD");
 
 function getComputerChoice() {
   let choice = Math.random() * 3;
-  console.log(choice);
 
   if (choice <= 1) {
     return "rock";
