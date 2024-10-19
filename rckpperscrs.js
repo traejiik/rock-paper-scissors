@@ -17,7 +17,7 @@ function getComputerChoice() {
 function getHumanChoice() {
     let answer = prompt("Please enter either Rock, Paper or Scissors: ");
 
-    switch (answer) {
+    switch (answer.toLowerCase()) {
         case "rock":
             return answer;
             break;
@@ -33,8 +33,8 @@ function getHumanChoice() {
     }
 }
 
-function playRound() {
-    
+function playRound(humanChoice, computerChoice) {
+
 }
 
 var humanScore = 0;
