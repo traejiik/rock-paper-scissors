@@ -81,5 +81,12 @@ function playGame() {
   const humanSelection = getHumanChoice();
   const computerSelection = getComputerChoice();
 
-  playRound(humanSelection, computerSelection);
+  for (let i = 1; i <= 5; i++) {
+    playRound(humanSelection, computerSelection);
+  }
+
 }
+
+playGame();
+
+console.log("The final score is, humanScore: ", humanScore, ", computerScore: ", computerScore);
