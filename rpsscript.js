@@ -12,10 +12,10 @@ function getComputerChoice() {
   }
 }
 
-function getHumanChoice() {
-  let answer = prompt("Please enter either Rock, Paper or Scissors: ");
+function getHumanChoice(answer) {
+  // let answer = prompt("Please enter either Rock, Paper or Scissors: ");
 
-  switch (answer.toLowerCase()) {
+  switch (answer) {
     case "rock":
       return answer;
       break;
@@ -73,23 +73,41 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-/* function playGame() {
+function playGame() {
   for (let i = 1; i <= 5; i++) {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
   }
-
-} */
+}
 
 var humanScore = 0;
 var computerScore = 0;
-playGame();
+// playGame();
 
-console.log("The final score is, humanScore: ", humanScore, ", computerScore: ", computerScore);
+/*console.log(
+  "The final score is, humanScore: ",
+  humanScore,
+  ", computerScore: ",
+  computerScore
+); */
 
+const body = document.querySelector("body");
 const container = document.createElement("div");
 
+body.appendChild(container);
+
 const rock = document.createElement("button");
+rock.textContent = "Rock";
 const paper = document.createElement("button");
+paper.textContent = "Paper";
 const scissors = document.createElement("button");
+scissors.textContent = "Scissors";
+
+container.appendChild(rock);
+container.appendChild(paper);
+container.appendChild(scissors);
+
+rock.addEventListener("click", () => playRound("rock", getComputerChoice()));
+paper.addEventListener("click", () => playRound("paper", getComputerChoice()));
+scissors.addEventListener("click", () => playRound("scissors", getComputerChoice()));
