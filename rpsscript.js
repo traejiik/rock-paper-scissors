@@ -73,17 +73,23 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-function playGame() {
+/* function playGame() {
   for (let i = 1; i <= 5; i++) {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
   }
 
-}
+} */
 
 var humanScore = 0;
 var computerScore = 0;
 playGame();
 
 console.log("The final score is, humanScore: ", humanScore, ", computerScore: ", computerScore);
+
+const container = document.createElement("div");
+
+const rock = document.createElement("button");
+const paper = document.createElement("button");
+const scissors = document.createElement("button");
