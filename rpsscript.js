@@ -94,8 +94,14 @@ var computerScore = 0;
 
 const body = document.querySelector("body");
 const container = document.createElement("div");
+const score = document.createElement("div");
 
+body.style.cssText = "display: block; text-align: center";
+body.appendChild(score);
 body.appendChild(container);
+
+const hscore = document.createElement("div");
+const cscore = document.createElement("div");
 
 const rock = document.createElement("button");
 rock.textContent = "Rock";
