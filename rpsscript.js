@@ -115,7 +115,7 @@ comp.appendChild(compName);
 compName.textContent = "COMPUTER";
 compName.style.cssText = "font-size: 2em; font-weight: bold";
 
-resultDisplay.style.cssText = "background-color: whitesmoke; border-radius: 0.4em; font-size: 2em; margin: 1em";
+resultDisplay.style.cssText = "background-color: whitesmoke; border-radius: 0.4em; font-size: 2em; margin: 1em; padding-top: 0.5em; padding-bottom: 0.5em";
 
 const rock = document.createElement("button");
 rock.textContent = "Rock";
@@ -130,7 +130,7 @@ container.appendChild(scissors);
 
 buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
-  button.style.cssText = "padding: 0.125em;";
+  button.style.cssText = "padding: 1.5em;margin: 1.5em;background-color: skyblue;border-radius: 0.4em;border-color: grey;font-weight: bold";
 });
 
 rock.addEventListener("click", () => playRound("rock", getComputerChoice()));
