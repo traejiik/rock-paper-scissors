@@ -12,25 +12,6 @@ function getComputerChoice() {
   }
 }
 
-function getHumanChoice(answer) {
-  // let answer = prompt("Please enter either Rock, Paper or Scissors: ");
-
-  switch (answer) {
-    case "rock":
-      return answer;
-      break;
-    case "paper":
-      return answer;
-      break;
-    case "scissors":
-      return answer;
-      break;
-    default:
-      console.log("Not a valid choice");
-      break;
-  }
-}
-
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
     console.log("It's a Draw!");
@@ -73,24 +54,8 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-function playGame() {
-  for (let i = 1; i <= 5; i++) {
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-  }
-}
-
 var humanScore = 0;
 var computerScore = 0;
-// playGame();
-
-/*console.log(
-  "The final score is, humanScore: ",
-  humanScore,
-  ", computerScore: ",
-  computerScore
-); */
 
 const body = document.querySelector("body");
 const container = document.createElement("div");
@@ -102,6 +67,16 @@ body.appendChild(container);
 
 const hscore = document.createElement("div");
 const cscore = document.createElement("div");
+
+score.style.cssText = "display: flex; justify-content: space-evenly";
+
+hscore.textContent = humanScore;
+hscore.style.cssText = "border-radius: 0.4em; width: 10em; height: 10em; text-align: center";
+cscore.textContent = computerScore;
+cscore.style.cssText = "border-radius: 0.4em; width: 10em; height: 10em; text-align: center";
+
+score.appendChild(hscore);
+score.appendChild(cscore);
 
 const rock = document.createElement("button");
 rock.textContent = "Rock";
