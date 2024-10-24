@@ -128,6 +128,11 @@ container.appendChild(rock);
 container.appendChild(paper);
 container.appendChild(scissors);
 
+buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+  button.style.cssText = "padding: 0.125em;";
+});
+
 rock.addEventListener("click", () => playRound("rock", getComputerChoice()));
 paper.addEventListener("click", () => playRound("paper", getComputerChoice()));
 scissors.addEventListener("click", () => playRound("scissors", getComputerChoice()));
