@@ -60,7 +60,7 @@ function playRound(humanChoice, computerChoice) {
     humanScore = 0;
     computerScore = 0;
   } else if (computerScore === 5) {
-    result = "Better Luck Next Time! You Lose";
+    result = "Better Luck Next Time! Computer Wins";
     humanScore = 0;
     computerScore = 0;
   }
@@ -88,12 +88,12 @@ const cscore = document.createElement("div");
 score.style.cssText = "display: flex; justify-content: space-evenly";
 
 hscore.style.cssText = "border: 2px solid black; border-radius: 0.4em; width: 10em; height: 10em; text-align: center; line-height: 10em; font-size: x-large; background-color: aqua; color: black";
-cscore.style.cssText = "border: 2px solid black; border-radius: 0.4em; width: 10em; height: 10em; text-align: center; line-height: 10em; font-size: x-large; background-color: red; color: black";
+cscore.style.cssText = "border: 2px solid black; border-radius: 0.4em; width: 10em; height: 10em; text-align: center; line-height: 10em; font-size: x-large; background-color: yellow; color: black";
 
 score.appendChild(hscore);
 score.appendChild(cscore);
 
-resultDisplay.style.cssText = "background-color: grey; border-radius: 0.4em; font-size: 2em; margin: 1em";
+resultDisplay.style.cssText = "background-color: whitesmoke; border-radius: 0.4em; font-size: 2em; margin: 1em";
 
 const rock = document.createElement("button");
 rock.textContent = "Rock";
