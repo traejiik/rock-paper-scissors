@@ -73,11 +73,16 @@ var humanScore = 0;
 var computerScore = 0;
 
 const body = document.querySelector("body");
+const head = document.createElement("h1");
 const container = document.createElement("div");
 const score = document.createElement("div");
 const resultDisplay = document.createElement("div");
 
-body.style.cssText = "display: block; text-align: center";
+body.style.cssText = "display: block; text-align: center; font-family: Roboto, sans-serif";
+
+head.textContent = "ROCK PAPER SCISSORS";
+
+body.appendChild(head);
 body.appendChild(score);
 body.appendChild(resultDisplay);
 body.appendChild(container);
@@ -85,10 +90,10 @@ body.appendChild(container);
 const hscore = document.createElement("div");
 const cscore = document.createElement("div");
 
-score.style.cssText = "display: flex; justify-content: space-evenly";
+score.style.cssText = "display: flex; justify-content: space-evenly; margin: 1em";
 
-hscore.style.cssText = "border: 2px solid black; border-radius: 0.4em; width: 10em; height: 10em; text-align: center; line-height: 10em; font-size: x-large; background-color: aqua; color: black";
-cscore.style.cssText = "border: 2px solid black; border-radius: 0.4em; width: 10em; height: 10em; text-align: center; line-height: 10em; font-size: x-large; background-color: yellow; color: black";
+hscore.style.cssText = "border: 5px solid aqua; border-radius: 0.4em; width: 10em; height: 10em; text-align: center; line-height: 10em; font-size: xx-large";
+cscore.style.cssText = "border: 5px solid yellow; border-radius: 0.4em; width: 10em; height: 10em; text-align: center; line-height: 10em; font-size: xx-large";
 
 score.appendChild(hscore);
 score.appendChild(cscore);
