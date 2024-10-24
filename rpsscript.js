@@ -77,26 +77,43 @@ const head = document.createElement("h1");
 const container = document.createElement("div");
 const score = document.createElement("div");
 const resultDisplay = document.createElement("div");
+const subcont = document.createElement("div");
 
 body.style.cssText = "display: block; text-align: center; font-family: Roboto, sans-serif";
 
 head.textContent = "ROCK PAPER SCISSORS";
 
 body.appendChild(head);
-body.appendChild(score);
+body.appendChild(subcont);
 body.appendChild(resultDisplay);
 body.appendChild(container);
 
+subcont.appendChild(score);
+
+const player = document.createElement("div");
+const comp = document.createElement("div");
 const hscore = document.createElement("div");
 const cscore = document.createElement("div");
+const playerName = document.createElement("div");
+const compName = document.createElement("div");
 
 score.style.cssText = "display: flex; justify-content: space-evenly; margin: 1em";
 
-hscore.style.cssText = "border: 5px solid aqua; border-radius: 0.4em; width: 10em; height: 10em; text-align: center; line-height: 10em; font-size: xx-large";
-cscore.style.cssText = "border: 5px solid yellow; border-radius: 0.4em; width: 10em; height: 10em; text-align: center; line-height: 10em; font-size: xx-large";
+hscore.style.cssText = "border: 5px solid aqua; border-radius: 0.4em; width: 10em; height: 10em; text-align: center; line-height: 10em; font-size: xx-large; margin-bottom: 0.3em";
+cscore.style.cssText = "border: 5px solid yellow; border-radius: 0.4em; width: 10em; height: 10em; text-align: center; line-height: 10em; font-size: xx-large; margin-bottom: 0.3em";
 
-score.appendChild(hscore);
-score.appendChild(cscore);
+score.appendChild(player);
+score.appendChild(comp);
+
+player.appendChild(hscore);
+player.appendChild(playerName);
+playerName.textContent = prompt("Enter Your Name").toUpperCase();
+playerName.style.cssText = "font-size: 2em; font-weight: bold";
+
+comp.appendChild(cscore);
+comp.appendChild(compName);
+compName.textContent = "COMPUTER";
+compName.style.cssText = "font-size: 2em; font-weight: bold";
 
 resultDisplay.style.cssText = "background-color: whitesmoke; border-radius: 0.4em; font-size: 2em; margin: 1em";
 
